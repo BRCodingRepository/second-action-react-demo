@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: 18
       - name: Install Dependencies
-        uses: npm ci
+        run: npm ci
+      - name: Build App
+        run: npm run build
       - name: deploy
         run: echo" Deploying..."
